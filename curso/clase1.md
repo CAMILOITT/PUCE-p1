@@ -1,6 +1,6 @@
 # tipos de datos
 
-´´´python
+```python
 
 int
 str
@@ -12,22 +12,22 @@ tuple
 set
 complex
 None
-´´´
+```
 
 ## bucles
 
-´´´ python
+```python
 while True:
   print("Hola Mundo")
   break
 
 for i in range(5):
   print(i)
-´´´
+```
 
 ## condicionales
 
-´´´ python
+```python
 x = 10
 
 if x > 5:
@@ -44,15 +44,15 @@ match x:
     print("x es 2")
   case _:
     print("x no es ni 1 ni 2")
-´´´
+```
 
 ## conectores lógicos
 
-´´´ python
+```python
 True and False  # condicional con dos verdaderas.
 True or False  # condicional con una verdadera.
 not True  # negación.
-´´´
+```
 
 ## estructura de un programa
 
@@ -62,22 +62,22 @@ import library
 
 2. def variables
 
-´´´python
+```python
 a=5
 b=9
 
 ------------------
 a= input("Ingresar su nombre")
-´´´
+```
 
 3. usar funciones
 
-´´´python
+```python
 if
 else
 for
 while
-´´´
+```
 
 4. realizar el proceso
 5. impresión de datos
