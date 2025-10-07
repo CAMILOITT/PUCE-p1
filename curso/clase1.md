@@ -60,7 +60,7 @@ not True  # negación.
 
 import library
 
-2. def variables
+2. definir variables, clases y funciones
 
 ```python
 a=5
@@ -83,3 +83,9 @@ while
 5. impresión de datos
 
 ## funciones
+
+```python
+def nombre():
+  # lógica de la function en question
+  pass
+```
