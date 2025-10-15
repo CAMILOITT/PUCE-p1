@@ -43,20 +43,25 @@
 # # len()
 
 
-# # a = int(input("ingrese su clave:"))
-# # clave = 1234
-# # if len(a) == 4:
-# #   print("digitos correctos")
-# # elif a == clave:
-# #   print("clave correcta")
-
+a = int(input("ingrese su clave:"))
+clave = 1234
 
 if len(a) > 4:
-  print("acceso incorrecto")
+  print("digitos correctos")
 else:
   print("clave incorrecta")
-  a = input("ingrese la calve (intento 2 de 3)")
+  a = input("ingrese la clave (intento 1 de 3)")
   if a == clave:
     print("acceso correcto")
   else:
     print("clave incorrecta")
+    a = input("ingrese la clave (intento 2 de 3)")
+    if a == clave:
+      print("acceso correcto")
+    else:
+      print("clave incorrecta")
+      a = input("ingrese la clave (intento 3  de 3)")
+      if a == clave:
+        print("acceso correcto")
+      else:
+        print("cuenta bloqueada")
