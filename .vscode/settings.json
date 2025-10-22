@@ -6,16 +6,6 @@
     "**/.DS_Store": true,
     "**/Thumbs.db": true,
     "**/*.crswap": true,
-    "[!c]*/**": true,
-    "c[!u]*/**": true,
-    "cu[!r]*/**": true,
-    "cur[!s]*/**": true,
-    "curs[!o]*/**": true,
-    "curso/[!c]*/**": true,
-    "curso/c[!l]*/**": true,
-    "curso/cl[!a]*/**": true,
-    "curso/cla[!s]*/**": true,
-    "curso/clas[!e]*/**": true,
     "curso/clase[!6]*/**": true
   }
 }

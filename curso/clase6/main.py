@@ -95,10 +95,10 @@ while ano_usuario_nacimiento < ano_actual and mes_usuario_nacimiento <= 12:
     contador_dia += 1
     dia_usuario_nacimiento += 1
 
-if mes_usuario_nacimiento >= mes_actual:
-  contador_ano -= 1
-if dia_usuario_nacimiento >= dia_actual:
-  contador_mes += 12
+# if mes_usuario_nacimiento >= mes_actual:
+#   contador_ano -= 1
+# if dia_usuario_nacimiento >= dia_actual:
+#   contador_mes += 12
 
 
 print("tu fecha de nacimiento es")
