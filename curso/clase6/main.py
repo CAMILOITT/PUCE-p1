@@ -71,37 +71,46 @@
 
 # ingresar la fecha de cumpleaños del usuario y mostrar cuantos año, meses y Dias tiene.
 
-mes_actual = 10
-ano_actual = 2025
-dia_actual = 21
+MES_ACTUAL = 10
+ANO_ACTUAL = 2025
+DIA_ACTUAL = 21
+PROMEDIO_DIAS_MES = 30
+MESES_EN_ANO = 12
 
-ano_usuario_nacimiento = int(input("Ingrese su año de nacimiento: "))
-mes_usuario_nacimiento = int(input("Ingrese su mes de nacimiento (1-12): "))
-dia_usuario_nacimiento = int(input("Ingrese su dia de nacimiento: (1-30)"))
+print(" " * 5, "Calculadora de edad", " " * 5)
+print("-" * 30)
+print("Ingrese los siguientes datos de su fecha de nacimiento:")
+dia_usuario_nacimiento = int(input("Dia (1-30): "))
+mes_usuario_nacimiento = int(input("Mes (1-12): "))
+ano_usuario_nacimiento = int(input("Año: "))
 
 contador_ano = 0
 contador_mes = 0
 contador_dia = 0
 
+# Ajuste de días y meses
+if dia_usuario_nacimiento > DIA_ACTUAL:
+  DIA_ACTUAL += PROMEDIO_DIAS_MES
+  MES_ACTUAL -= 1
+if mes_usuario_nacimiento > MES_ACTUAL:
+  MES_ACTUAL += MESES_EN_ANO
+  ANO_ACTUAL -= 1
 
-while ano_usuario_nacimiento < ano_actual and mes_usuario_nacimiento <= 12:
-  if ano_usuario_nacimiento < ano_actual:
+CONDICION_WHILE = (
+  ano_usuario_nacimiento < ANO_ACTUAL or mes_usuario_nacimiento < MES_ACTUAL or dia_usuario_nacimiento < DIA_ACTUAL
+)
+
+while CONDICION_WHILE:
+  if ano_usuario_nacimiento < ANO_ACTUAL:
     ano_usuario_nacimiento += 1
     contador_ano += 1
-  if mes_usuario_nacimiento < mes_actual:
-    contador_dia += 1
+  if mes_usuario_nacimiento < MES_ACTUAL:
+    contador_mes += 1
     mes_usuario_nacimiento += 1
-  if dia_usuario_nacimiento < dia_actual:
+  if dia_usuario_nacimiento < DIA_ACTUAL:
     contador_dia += 1
     dia_usuario_nacimiento += 1
 
-if mes_usuario_nacimiento >= mes_actual:
-  contador_ano -= 1
-if dia_usuario_nacimiento >= dia_actual:
-  contador_mes += 12
 
-
-print("tu fecha de nacimiento es")
-print("edad es:", contador_ano)
-print("mes es:", contador_mes)
-print("dia es:", contador_dia)
+print("Tu fecha de nacimiento es")
+print("tienes:", contador_ano, "años, con", contador_mes, "meses y", contador_dia, "dias.")
