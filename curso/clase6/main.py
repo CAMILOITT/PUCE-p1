@@ -71,20 +71,26 @@
 
 # ingresar la fecha de cumpleaños del usuario y mostrar cuantos año, meses y Dias tiene.
 
-mes_actual = 10
 ano_actual = 2025
-dia_actual = 21
+mes_actual = 10
+dia_actual = 22
 
 ano_usuario_nacimiento = int(input("Ingrese su año de nacimiento: "))
 mes_usuario_nacimiento = int(input("Ingrese su mes de nacimiento (1-12): "))
-dia_usuario_nacimiento = int(input("Ingrese su dia de nacimiento: (1-30)"))
+dia_usuario_nacimiento = int(input("Ingrese su dia de nacimiento: (1-30): "))
 
 contador_ano = 0
 contador_mes = 0
 contador_dia = 0
 
+if dia_usuario_nacimiento > dia_actual:
+  dia_actual += 30
+  mes_usuario_nacimiento += 1
+if mes_usuario_nacimiento > mes_actual:
+  mes_actual += 12
+  dia_usuario_nacimiento += 1
 
-while ano_usuario_nacimiento < ano_actual and mes_usuario_nacimiento <= 12:
+while ano_usuario_nacimiento < ano_actual and mes_usuario_nacimiento <= mes_actual:
   if ano_usuario_nacimiento < ano_actual:
     ano_usuario_nacimiento += 1
     contador_ano += 1
@@ -95,13 +101,4 @@ while ano_usuario_nacimiento < ano_actual and mes_usuario_nacimiento <= 12:
     contador_dia += 1
     dia_usuario_nacimiento += 1
 
-# if mes_usuario_nacimiento >= mes_actual:
-#   contador_ano -= 1
-# if dia_usuario_nacimiento >= dia_actual:
-#   contador_mes += 12
-
-
-print("tu fecha de nacimiento es")
-print("edad es:", contador_ano)
-print("mes es:", contador_mes)
-print("dia es:", contador_dia)
+print("tienes", contador_ano, "años, con", contador_mes, "meses y", contador_dia, "dias")
